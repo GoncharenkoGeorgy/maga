@@ -1,0 +1,238 @@
+.navigation {
+  display: flex;
+  flex-direction: row;
+}
+
+.navigation__link {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+  align-self: center;
+}
+
+.navigation__border {
+  border: 1px solid #ffffff;
+  box-sizing: border-box;
+  border-radius: 100px;
+  margin-left: 32px;
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  padding: 8px 29px 15px;
+}
+
+.navigation__border_dark {
+  border: 1px solid black;
+}
+
+.navigation__border_light {
+  border: 1px solid white;
+}
+
+.navigation__link_active {
+  padding: 23px 0;
+  border-bottom: 3px solid black;
+}
+
+.navigation__link_active_light-theme {
+  padding: 23px 0;
+  border-bottom: 3px solid white;
+}
+
+.navigation__border-link {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  text-decoration: none;
+  color: black;
+}
+
+.navigation__link:last-of-type {
+  margin-right: 0;
+  margin-left: 25px;
+}
+
+.navigation__button {
+  display: none;
+}
+
+.navigation__light {
+  color: #ffffff;
+}
+
+.navigation__border:hover {
+  cursor: pointer;
+  opacity: .7;
+}
+
+.navigation__link:hover {
+  cursor: pointer;
+  opacity: .7;
+}
+
+.navigation__logout {
+  width: 24px;
+  height: 24px;
+  margin-left: 13px;
+}
+
+.navigation__logout_dark {
+  background-image: url(../../images/logout_dark.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.navigation__logout_light {
+  background-image: url(../../images/logout_light.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.navigation__container {
+  display: flex;
+}
+
+@media screen and (max-width: 1030px) {
+  .navigation__link {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .navigation__border-link {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .navigation__link_active {
+    padding: 20px 0;
+  }
+
+  .navigation__link_active_light-theme{
+    padding: 20px 0;
+  }
+}
+
+@media screen and (max-width: 780px) {
+
+  .navigation__link {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .navigation__container_active {
+    display: flex;
+    flex-direction: column;
+    background-color: #1A1B22;
+    padding: 0 40px;
+  }
+
+  .navigation {
+    display: none;
+    position: relative;
+  }
+
+  .navigation__button {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    z-index: 2;
+  }
+
+  .navigation__link {
+    align-self: center;
+  }
+
+  .navigation__black {
+    color: #111;
+  }
+
+  .navigation__link_active {
+    border: none;
+    align-self: center;
+    padding: 0;
+  }
+
+  .navigation__button-line {
+    height: 3px;
+    width: 22px;
+    background-color: white;
+    margin: 4px;
+    transition: background-color 0.25s ease, opacity 0.25s ease, transform 0.25s ease-in-out;
+    transform-origin: 50% 50%;
+  }
+  
+  .navigation__button-line_black {
+    background-color: black;
+  }
+
+  .navigation__button-line_white {
+    background-color: white;
+  }
+
+  .navigation__button-line_esc:first-child {
+    transform: rotate(45deg) translate3d(4px, 4px, 0);
+  }
+
+  .navigation__button-line_esc:last-child {
+    transform: rotate(-45deg) translate3d(4px, -4px, 0);
+  }
+
+  .navigation_visible {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+  }
+
+  .navigation__link:first-of-type {
+    margin-top: 72px;
+    margin-left: 0;
+    align-self: flex-start;
+  }
+  
+  .navigation__link {
+    font-size: 18px;
+    line-height: 56px;
+    margin-left: 18px;
+  }
+
+  .navigation__link:last-of-type {
+    font-size: 18px;
+    line-height: 24px;
+    margin-left: 0;
+    align-self: flex-start;
+  }
+
+  .navigation__border {
+    height: 56px;
+    width: 100%;
+    margin: 22px 0 24px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .navigation__container_active {
+    padding: 0 16px;
+  }
+
+  .navigation__link_active {
+    align-self: center;
+  }
+}
